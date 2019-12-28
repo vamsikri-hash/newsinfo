@@ -15,7 +15,7 @@ class App extends Component {
     console.log(1);
     this.setState({ loading: true });
     const res = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=in&category=${text}&apiKey=de371855895d444a9eac47444d7a6abe`
+      `https://newsapi.org/v2/top-headlines?country=in&category=${text}&apiKey=${process.env.REACT_APP_NEWS_KEY}`
     );
     console.log(res.data.articles);
     this.setState({ newsarray: res.data.articles, loading: false });
@@ -25,7 +25,7 @@ class App extends Component {
   async componentDidMount() {
     this.setState({ loading: true });
     const res = await axios.get(
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=de371855895d444a9eac47444d7a6abe"
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_NEWS_KEY}`
     );
     console.log(res.data.articles);
     this.setState({ newsarray: res.data.articles, loading: false });
