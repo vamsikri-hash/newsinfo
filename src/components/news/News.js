@@ -8,7 +8,7 @@ const News = ({ newsarray, loading }) => {
   } else {
     let i = 0;
     return (
-      <div style={newsStyle}>
+      <div className="grid-style">
         {newsarray.map(newsitem => (
           <NewsItem key={i++} newsitem={newsitem} />
         ))}
@@ -17,9 +17,4 @@ const News = ({ newsarray, loading }) => {
   }
 };
 
-const newsStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(2, 1fr)",
-  gridGap: "1rem"
-};
 export default News;

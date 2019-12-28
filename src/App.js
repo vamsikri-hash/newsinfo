@@ -9,6 +9,8 @@ class App extends Component {
     newsarray: [],
     loading: false
   };
+
+  //function to get news from given text....
   getNews = async text => {
     console.log(1);
     this.setState({ loading: true });
@@ -19,6 +21,7 @@ class App extends Component {
     this.setState({ newsarray: res.data.articles, loading: false });
   };
 
+  // default display news before any button is clicked...
   async componentDidMount() {
     this.setState({ loading: true });
     const res = await axios.get(
