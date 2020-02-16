@@ -24,6 +24,7 @@ class Navbar extends Component {
           <i className={this.props.icon} style={{ padding: "10px" }} />
           {this.props.title}
         </div>
+
         <ul>
           <li style={{ padding: "15px" }}>
             <button

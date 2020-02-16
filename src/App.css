@@ -6,6 +6,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
+
+.red-select {
+  width: 20%;
+}
 /* Global Styles */
 :root {
   --primary-color: #dc3545;
